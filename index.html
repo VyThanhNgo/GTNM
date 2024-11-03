@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Edu2One Dashboard - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMqH0bmQtzVZC4h44P6ekvWx1Wz8YePpI90ZZZ" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+   <!-- Navigation Bar -->
+   <header class="navbar">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <h1>
+            <img src="image/logo.png" alt="Edu2One Logo" class="logo">
+        </h1>
+    </a>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="groupdiary.html">Group Diary</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</header>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Introduction Section -->
+        <section class="introduction">
+            <h2>Welcome to the Comprehensive Learning Platform!</h2>
+            <p>We provide a quality online learning environment that helps you enhance knowledge and develop skills.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Key Features</h2>
+            <div class="feature-list">
+                <div class="feature" onclick="toggleDescription('lmsDescription')">
+                    <img src="image/16847466.png" alt="LMS">
+                    <h3>Learning Management System</h3>
+                    <div id="lmsDescription" class="feature-description">
+                        <p>Manage and track your learning journey with our intuitive LMS.</p>
+                    </div>
+                </div>
+                <div class="feature" onclick="toggleDescription('languageSkillDescription')">
+                    <img src="image/graduation_17267262.png" alt="Language Skills">
+                    <h3>Language Skills</h3>
+                    <div id="languageSkillDescription" class="feature-description">
+                        <p>Learn and practice language skills effectively with interactive exercises and resources.</p>
+                    </div>
+                </div>
+                <div class="feature" onclick="toggleDescription('virtualLabDescription')">
+                    <img src="image/online-course_16847324.png" alt="Virtual Lab">
+                    <h3>Learning Rewards System</h3>
+                    <div id="virtualLabDescription" class="feature-description">
+                        <p>Earn points for activities and redeem rewards. Stay motivated with a leaderboard!
+                        </p>
+                    </div>
+                <!-- Script để xử lý toggle cho phần mô tả tính năng -->
+<script>
+    function toggleDescription(descriptionId) {
+        const description = document.getElementById(descriptionId);
+        // Kiểm tra xem mô tả hiện đang hiển thị hay ẩn
+        if (description.style.display === 'block') {
+            description.style.display = 'none';
+        } else {
+            // Ẩn tất cả các mô tả khác
+            document.querySelectorAll('.feature-description').forEach(function(desc) {
+                desc.style.display = 'none';
+            });
+            // Hiển thị mô tả đã chọn
+            description.style.display = 'block';
+        }
+    }
+</script>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <h2>Start Learning Today!</h2>
+            <button>Sign Up Now</button>
+        </div>
+    </div>
+
+    <!-- AI Assistant Icon -->
+    <div class="ai-assistant-icon" onclick="toggleChatBox()">
+        <div class="icon-circle">
+            <span class="icon-question">?</span>
+        </div>
+    </div>
+
+     <!-- Chat Box -->
+     <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <h3>AI Assistant</h3>
+            <button onclick="toggleChatBox()">✖</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="message ai-message">Hi! How can I help you today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userQuestion" placeholder="Type your message..." />
+            <button onclick="sendQuestion()">Send</button>
+        </div>
+    </div>
+
+    <!-- Script để xử lý chat box -->
+    <script>
+        function toggleChatBox() {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.style.display = chatBox.style.display === 'none' || chatBox.style.display === '' ? 'flex' : 'none';
+        }
+
+        function sendQuestion() {
+            const userQuestion = document.getElementById('userQuestion').value;
+            const chatBody = document.getElementById('chatBody');
+
+            if (userQuestion.trim() !== '') {
+                // Hiển thị tin nhắn người dùng
+                const userMessage = document.createElement('div');
+                userMessage.className = 'message user-message';
+                userMessage.textContent = userQuestion;
+                chatBody.appendChild(userMessage);
+
+                // Trả lời của AI
+                const aiMessage = document.createElement('div');
+                aiMessage.className = 'message ai-message';
+                aiMessage.textContent = generateResponse(userQuestion);
+                chatBody.appendChild(aiMessage);
+
+                // Xóa nội dung input
+                document.getElementById('userQuestion').value = '';
+
+                // Cuộn xuống cuối
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+        }
+
+        function generateResponse(question) {
+            return `AI Response to: "${question}"`;
+        }
+    </script>
+    <!-- Contact Section -->
+    <footer class="contact">
+        <h2>Contact Us</h2>
+        <p>Address: 123 Education St, Learning City</p>
+        <p>Email: support@edu.com</p>
+        <p>Phone: +123 456 7890</p>
+        <div class="social-icons">
+            <a href="mailto:support@edu2one.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="#" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
