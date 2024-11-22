@@ -1,162 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Edu2One Dashboard - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="index.css"> <!-- Link to the CSS file -->
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learning</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <div class="header">
+    <div class="nav-left">
+      <div class="logo">
+        <a href="index.html">
+          <img src="image/logo2.png" alt="Logo">
+        </a>
+      </div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="groupdiary.html">Group Diary</a>
+    </div>
+    
+    <div class="nav-right">
+      <a href="#contact">Contact</a>
+      <a href="#login" class="log-in">Log In</a>
+      <a href="#sign-up" class="sign-up">Sign Up</a>
+      
+      <!-- Language Selector -->
+      <div class="language-selector">
+        <i class="fas fa-globe language-icon" id="language-toggle"></i>
+        <div class="dropdown-content">
+          <a href="#" data-lang="en">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English" class="flag-icon">
+            English
+          </a>
+          <a href="#" data-lang="vi">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" alt="Vietnamese" class="flag-icon">
+            Vietnamese
+          </a>
+          <a href="#" data-lang="es">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_Spain.svg" alt="Spanish" class="flag-icon">
+            Spanish
+          </a>
+          <a href="#" data-lang="fr">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="French" class="flag-icon">
+            French
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-   <!-- Navigation Bar -->
-   <header class="navbar">
-    <a href="index.html" style="text-decoration: none; color: inherit;">
-        <h1>
-            <img src="image/logo.png" alt="Edu2One Logo" class="logo">
-        </h1>
-    </a>
-    <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="groupdiary.html">Group Diary</a></li>
-        <li><a href="project.html">Project</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</header>
-
-    <!-- Main Container -->
-    <div class="container">
-
-        <!-- Introduction Section -->
-        <section class="introduction">
-            <h2>Welcome to the Comprehensive Learning Platform!</h2>
-            <p>We provide a quality online learning environment that helps you enhance knowledge and develop skills.</p>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <h2>Key Features</h2>
-            <div class="feature-list">
-                <div class="feature" onclick="toggleDescription('lmsDescription')">
-                    <img src="image/16847466.png" alt="LMS">
-                    <h3>Learning Management System</h3>
-                    <div id="lmsDescription" class="feature-description">
-                        <p>Manage and track your learning journey with our intuitive LMS.</p>
-                    </div>
-                </div>
-                <div class="feature" onclick="toggleDescription('languageSkillDescription')">
-                    <img src="image/graduation_17267262.png" alt="Language Skills">
-                    <h3>Language Skills</h3>
-                    <div id="languageSkillDescription" class="feature-description">
-                        <p>Learn and practice language skills effectively with interactive exercises and resources.</p>
-                    </div>
-                </div>
-                <div class="feature" onclick="toggleDescription('virtualLabDescription')">
-                    <img src="image/online-course_16847324.png" alt="Virtual Lab">
-                    <h3>Learning Rewards System</h3>
-                    <div id="virtualLabDescription" class="feature-description">
-                        <p>Earn points for activities and redeem rewards. Stay motivated with a leaderboard!
-                        </p>
-                    </div>
-                <!-- Script để xử lý toggle cho phần mô tả tính năng -->
-<script>
-    function toggleDescription(descriptionId) {
-        const description = document.getElementById(descriptionId);
-        // Kiểm tra xem mô tả hiện đang hiển thị hay ẩn
-        if (description.style.display === 'block') {
-            description.style.display = 'none';
-        } else {
-            // Ẩn tất cả các mô tả khác
-            document.querySelectorAll('.feature-description').forEach(function(desc) {
-                desc.style.display = 'none';
-            });
-            // Hiển thị mô tả đã chọn
-            description.style.display = 'block';
-        }
-    }
-</script>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <div class="cta">
-            <h2>Start Learning Today!</h2>
-            <button>Sign Up Now</button>
+  
+  <class="hero-section">
+    <div class="hero-content">
+        <h1>Unlock Your Language Potential</h1>
+        <ul class="custom-list">
+            <li>
+                <img src="image/icon.jpg" alt="icon" class="list-icon">
+                Personalized lessons tailored to your learning goals
+            </li>
+            <li>
+                <img src="image/icon.jpg" alt="icon" class="list-icon">
+                Track your progress with real-time feedback
+            </li>
+            <li>
+                <img src="image/icon.jpg" alt="icon" class="list-icon">
+                Join a global community of motivated learners
+            </li>
+          </ul>
+          <button class="btn-start-now">Start Now</button>
+        </div>
+    <div class="hero-images">
+      <div class="image-wrapper">
+        <img src="image/anh.png" alt="Student 2" class="image2">
+      </div>
+    </div>
+  <section class="offer-section">
+    <h2 class="offer-title">See what One3Learn offers</h2>
+    <div class="offer-container">
+      <div class="offer-item">
+        <img src="image/of1.png" alt="Progress Tracker" class="offer-icon">
+        <h3>Progress Tracker</h3>
+        <p>Monitor your progress, see how much you’ve improved, and stay motivated throughout your learning journey.</p>
+        <a href="#" class="offer-link">Find my teacher &gt;</a>
+      </div>
+      <div class="offer-item">
+        <img src="image/of2.png" alt="Quizzes & Feedback" class="offer-icon">
+              <h3>Quizzes & Feedback</h3>
+        <p>Complete automated tests, get detailed feedback to improve your knowledge and continue developing.</p>
+        <a href="#" class="offer-link">Start the quiz &gt;</a>
+      </div>
+      <div class="offer-item">
+        <img src="image/33.jpg" alt="Learning Community" class="offer-icon">
+        <h3>Learning Community</h3>
+        <p>Connect with a global community of learners, ask questions, and receive support to enhance your learning experience.</p>
+        <a href="#" class="offer-link">Join the community &gt;</a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+        <!-- Legal Information Section (Bên trái) -->
+        <div class="legal-info">
+            <p>© 2024 Hootsuite Inc. All Rights Reserved.</p>
+            <a href="#">Legal Center</a> | <a href="#">Trust Center</a> | <a href="#">Privacy</a> | 
+            <a href="#">Cookie preferences</a> | <a href="#">Accessibility</a>
+        </div>
+        
+        <!-- Social Media Links (Bên phải) -->
+        <div class="social-media">
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i> <!-- Facebook Icon -->
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+            </a>
+            <a href="mailto:example@mail.com" target="_blank" class="social-icon">
+                <i class="fas fa-envelope"></i> <!-- Email Icon -->
+            </a>
         </div>
     </div>
+</footer>
 
-    <!-- AI Assistant Icon -->
-    <div class="ai-assistant-icon" onclick="toggleChatBox()">
-        <div class="icon-circle">
-            <span class="icon-question">?</span>
-        </div>
-    </div>
 
-     <!-- Chat Box -->
-     <div class="chat-box" id="chatBox">
-        <div class="chat-header">
-            <h3>AI Assistant</h3>
-            <button onclick="toggleChatBox()">✖</button>
-        </div>
-        <div class="chat-body" id="chatBody">
-            <div class="message ai-message">Hi! How can I help you today?</div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="userQuestion" placeholder="Type your message..." />
-            <button onclick="sendQuestion()">Send</button>
-        </div>
-    </div>
-
-    <!-- Script để xử lý chat box -->
-    <script>
-        function toggleChatBox() {
-            const chatBox = document.getElementById('chatBox');
-            chatBox.style.display = chatBox.style.display === 'none' || chatBox.style.display === '' ? 'flex' : 'none';
-        }
-
-        function sendQuestion() {
-            const userQuestion = document.getElementById('userQuestion').value;
-            const chatBody = document.getElementById('chatBody');
-
-            if (userQuestion.trim() !== '') {
-                // Hiển thị tin nhắn người dùng
-                const userMessage = document.createElement('div');
-                userMessage.className = 'message user-message';
-                userMessage.textContent = userQuestion;
-                chatBody.appendChild(userMessage);
-
-                // Trả lời của AI
-                const aiMessage = document.createElement('div');
-                aiMessage.className = 'message ai-message';
-                aiMessage.textContent = generateResponse(userQuestion);
-                chatBody.appendChild(aiMessage);
-
-                // Xóa nội dung input
-                document.getElementById('userQuestion').value = '';
-
-                // Cuộn xuống cuối
-                chatBody.scrollTop = chatBody.scrollHeight;
-            }
-        }
-
-        function generateResponse(question) {
-            return `AI Response to: "${question}"`;
-        }
-    </script>
-    <!-- Contact Section -->
-    <footer class="contact">
-        <h2>Contact Us</h2>
-        <p>Address: 123 Education St, Learning City</p>
-        <p>Email: support@edu.com</p>
-        <p>Phone: +123 456 7890</p>
-        <div class="social-icons">
-            <a href="mailto:support@edu2one.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            <a href="#" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        </div>
-    </footer>
-
-</body>
-</html>
