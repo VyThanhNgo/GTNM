@@ -1,145 +1,208 @@
-    /* Reset CSS */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Roboto', 'Lato', 'Montserrat', 'Merriweather', 'Poppins', sans-serif;
-        scroll-behavior: smooth;
-        line-height: 1.5;
-    }
+@import "base.css";
+@import "header.css";
+@import "contact.css";
 
-    /* Background gradient */
+:root {
+  --primary-color: #FF4E42;
+  --secondary-color: #313140;
+  --background-color: #f9f9f9;
+  --text-color: #515164;
+  --font-family: 'Noto Sans', sans-serif;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background: linear-gradient(135deg, #4f5bd5, #962fbf);
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    animation: rotation 6s linear infinite;
-        z-index: 0;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  display: flex;
+  flex-direction: column; /* Đặt các phần tử trong body theo cột */
+  min-height: 100vh; /* Chiều cao tối thiểu của body là 100% cửa sổ trình duyệt */
 }
-/* Contact Section */
-.contact {
-    background: rgba(255, 255, 255, 0.15); /* Nền trắng trong suốt 15% */
-    backdrop-filter: blur(10px); /* Làm mờ nền phía sau */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    margin-top: 20px;
+.main-content {
+  flex-grow: 1; /* Lấp đầy không gian còn lại giữa header và footer */
 }
 
-.contact h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 80px;
+  border-bottom: 2px solid #ddd;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
-.contact p {
-    margin: 5px 0;
-    font-size: 16px;
+.header .logo {
+  flex-shrink: 0;
 }
 
-.contact .social-icons {
-    margin-top: 10px;
+.header .logo img {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+  max-width: 200px;
 }
 
-.contact .social-icons a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 20px;
-    text-decoration: none;
-    transition: color 0.3s;
+.nav-left {
+  display: flex; /* Sắp xếp ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 20px; /* Khoảng cách giữa các liên kết */
 }
 
-.contact .social-icons a:hover {
-    color: #962fbf;
+.nav-left a {
+  color: var(--secondary-color); /* Màu chữ mặc định */
+  text-decoration: none; /* Loại bỏ gạch dưới */
+  font-size: 16px; /* Kích thước chữ */
+  font-weight: 600; /* Đậm hơn một chút */
+  transition: color 0.3s ease; /* Hiệu ứng mượt khi thay đổi màu */
 }
 
-.header h1 {
-    font-size: 3em;
-    font-weight: bold;
-    z-index: 1;
-    position: relative;
-    color: #f0f0f0;
-    transform: translate(60px, 38px); /* Dịch chuyển 20px sang phải và 10px lên trên */
+.nav-left a:hover {
+  color: var(--primary-color); /* Màu chữ khi hover */
 }
-.logo {
-    height: 100px; /* Kích thước chiều cao logo */
-    vertical-align: middle; /* Căn giữa logo với văn bản */
-    margin-right: 10px; /* Khoảng cách giữa logo và văn bản */
-    margin-top: -10px;
-    margin-bottom: 0px;
+
+.nav-right {
+  display: flex; /* Sắp xếp ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between; /* Tạo khoảng cách đều giữa các mục */
+  gap: 20px; /* Khoảng cách giữa các liên kết */
 }
-.header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-    color: #f0f0f0;
-    z-index: 1;
-    position: relative;
-    transform: translate(60px, 35px); /* Dịch chuyển 20px sang phải và 5px xuống dưới */
+
+.nav-right a {
+  color: var(--secondary-color); /* Màu chữ mặc định */
+  text-decoration: none; /* Loại bỏ gạch dưới */
+  font-size: 16px; /* Kích thước chữ */
+  font-weight: 600; /* Đậm hơn một chút */
+  transition: color 0.3s ease; /* Hiệu ứng mượt khi thay đổi màu */
+}
+
+.nav-right a:hover {
+  color: var(--primary-color); /* Màu chữ khi hover */
+}
+
+.nav-right .log-in {
+  color: #0073e6; /* Màu riêng cho nút Log in */
+}
+
+.nav-right .sign-up {
+  color: #28a745; /* Màu riêng cho nút Sign up */
+  font-weight: bold; /* Làm nổi bật */
+}
+
+.nav-right .log-in:hover {
+  color: #005bb5; /* Màu hover cho Log in */
+}
+
+.nav-right .sign-up:hover {
+  color: #1c7c31; /* Màu hover cho Sign up */
 }
 
 
-    /* Team Section */
+/* Responsive cho các màn hình nhỏ */
+@media (max-width: 576px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .nav-left {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .nav-right {
+    flex-shrink: 0;
+  }
+}
+
+
+/* Team Section */
 .team {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 90px;
-    gap: 20px; /* Added gap for spacing between members */
-    padding: 20px; /* Add padding around the section */
-    background: #f5f5f5; /* Light background for contrast */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    gap: 25px;
 }
 
 .member {
-    background-color: #fff;
-    border-radius: 15px; /* More rounded corners */
-    width: 300px; /* Adjusted width */
-    margin: 10px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow for emphasis */
+    background-color: #fff; /* Màu nền trắng cho thẻ */
+    border-radius: 15px;
+    width: 320px;
+    margin: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Đổ bóng tinh tế */
     text-align: center;
-    padding: 25px; /* More padding for better layout */
+    padding: 25px;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
-    overflow: hidden; /* For image hover effects */
+    overflow: hidden;
 }
 
 .member:hover {
-    transform: translateY(-5px); /* Slightly lift the card on hover */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transform: translateY(-8px); /* Nâng thẻ khi hover */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* Tăng bóng khi hover */
 }
 
 .member img {
-    width: 90%; /* Slightly larger image */
-    max-width: 140px; /* Max size for images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Circular image */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Ảnh tròn */
     margin-bottom: 15px;
-    border: 5px solid #4f5bd5; /* More pronounced border */
-    transition: transform 0.3s, border-color 0.3s; /* Transition effects */
+    border: 5px solid var(--primary-color); /* Màu viền ảnh */
+    transition: transform 0.3s, border-color 0.3s;
 }
 
 .member:hover img {
-    transform: scale(1.1); /* Scale image on hover */
-    border-color: #962fbf; /* Change border color on hover */
+    transform: scale(1.1); /* Phóng lớn ảnh khi hover */
+    border-color: var(--secondary-color); /* Đổi màu viền ảnh */
 }
 
 .member h3 {
-    color: #4f5bd5;
-    font-size: 17px; /* Increased font size */
-    margin: 10px 0; /* Adjusted margins */
-    font-weight: 600; /* Bold font for emphasis */
+    color: var(--secondary-color); /* Màu chữ chính */
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 700; /* Chữ đậm hơn */
 }
 
 .member p {
-    color: #666;
-    margin-top: 5px;
-    font-size: 1em; /* Consistent font size */
-    line-height: 1.5; /* Better readability */
+    color: var(--text-color); /* Màu chữ phụ */
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
 }
+
+/* Social icons in team section */
+.member .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.member .social-icons a {
+    color: var(--secondary-color); /* Màu biểu tượng mặc định */
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.member .social-icons a:hover {
+    color: var(--primary-color); /* Đổi màu khi hover */
+    transform: scale(1.2); /* Phóng lớn biểu tượng khi hover */
+}
+
 /* CSS cho Navigation Bar */
 .navbar {
     background: rgba(255, 255, 255, 0.15); /* Transparent background */
@@ -229,113 +292,112 @@ body {
     }
 
 
-     /* Biểu tượng AI */
-     .ai-assistant-icon {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, #4f5bd5, #962fbf); /* Sử dụng gradient làm nền */
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 26px;
-        font-weight: bold;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        z-index: 1000; /* Đảm bảo nó hiển thị trên các phần tử khác */
-        backdrop-filter: none; /* Không áp dụng hiệu ứng làm mờ */
-    }
     
-/* Chat box */
-.chat-box {
-    position: fixed;
-    bottom: 100px;
-    right: 20px;
-    width: 300px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    display: none;
-    flex-direction: column;
-}
-.ai-assistant-icon:hover {
-    background: #4f5bd5; /* Darker shade on hover */
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto; /* Đảm bảo footer luôn nằm dưới cùng */
+
 }
 
-/* Header của chat box */
-.chat-header {
-    background: linear-gradient(135deg, #4f5bd5, #962fbf);
-    color: #ffffff;
-    padding: 10px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+/* Nội dung trong footer */
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+  
+  .legal-info {
+    font-size: 14px;
+    color: #d1d1d1;
+  }
+  
+  .legal-info a {
+    color: #d1d1d1;
+    text-decoration: none;
+  }
+  
+  .legal-info a:hover {
+    color: #FF4E42;
+    text-decoration: underline;
+  }
+  
+  .legal-info p {
+    margin: 0;
+  }
+  
+  .social-media {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Nội dung chat */
-.chat-body {
-    padding: 10px;
-    height: 200px;
-    overflow-y: auto;
-}
-
-/* Input và nút gửi */
-.chat-input {
-    display: flex;
-    padding: 10px;
-    background-color: #f0f2f5;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-.chat-input input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-
-.chat-input button {
-    padding: 10px;
-    background: linear-gradient(135deg, #4f5bd5, #962fbf);
+    gap: 15px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
     color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #FF4E42;
+  }
+
+
+  /* Language Selector */
+.language-selector {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
-/* Tin nhắn */
-.message {
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 20px;
-    max-width: 80%;
-    clear: both;
+.language-selector .language-icon {
+  width: 30px;
+  height: 20px;
 }
 
-/* Tin nhắn của người dùng */
-.user-message {
-    background-color: #007bff;
-    color: #ffffff;
-    text-align: right;
-    float: right;
+.language-selector .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-/* Tin nhắn của AI */
-.ai-message {
-    background-color: #e9ecef;
-    color: #333333;
-    text-align: left;
-    float: left;
+.language-selector:hover .dropdown-content {
+  display: block;
 }
 
+.language-selector .dropdown-content a {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #313140;
+}
+
+.language-selector .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.language-selector .dropdown-content .flag-icon {
+  width: 20px;
+  height: 14px;
+  margin-right: 10px;
+}
+
+  
+  
     .social-icons {
         display: flex;      
         justify-content: center;      /* Sử dụng flexbox để căn chỉnh các phần tử */
