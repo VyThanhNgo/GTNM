@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C Edu2One Dashboard - About</title>
-    <link rel="stylesheet" href="about.css"> <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <a href="index.html" style="text-decoration: none; color: inherit;">
-            <h1>
-                <img src="image/logo.png" alt="Edu2One Logo" class="logo">
-            </h1>
+  <div class="header">
+    <div class="nav-left">
+      <div class="logo">
+        <a href="index.html">
+          <img src="image/logo2.png" alt="Logo">
         </a>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="groupdiary.html">Group Diary</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </header>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>About Us</h1>
-            <p>We are an innovative, dedicated team bringing top-quality solutions to our clients.</p>
+      </div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="groupdiary.html">Group Diary</a>
+    </div>
+    
+    <div class="nav-right">
+      <a href="#contact">Contact</a>
+      <a href="#login" class="log-in">Log In</a>
+      <a href="#sign-up" class="sign-up">Sign Up</a>
+      
+      <!-- Language Selector -->
+      <div class="language-selector">
+        <i class="fas fa-globe language-icon" id="language-toggle"></i>
+        <div class="dropdown-content">
+          <a href="#" data-lang="en">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English" class="flag-icon">
+            English
+          </a>
+          <a href="#" data-lang="vi">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" alt="Vietnamese" class="flag-icon">
+            Vietnamese
+          </a>
+          <a href="#" data-lang="es">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_Spain.svg" alt="Spanish" class="flag-icon">
+            Spanish
+          </a>
+          <a href="#" data-lang="fr">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="French" class="flag-icon">
+            French
+          </a>
         </div>
+      </div>
+    </div>
+  </div>
 
         <!-- Team Section -->
         <div class="team">
@@ -78,7 +98,7 @@
                 </div>
             </div>
             <div class="member">
-                <img src="image/4.jpg" alt="Tien">
+                <img src="image/4.jpg" alt="Vy">
                 <h3>Tien - Front-End Developer</h3>
                 <p>ID: 23130328<br>Builds pages and user-facing features.</p>
                 <div class="social-icons">
@@ -108,77 +128,35 @@
                 </div>
             </div>
         </div>
-
-       <!-- Contact Section -->
-       <footer class="contact">
-        <h2>Contact Us</h2>
-        <p>Address: 123 Education St, Learning City</p>
-        <p>Email: support@vntec.com</p>
-        <p>Phone: +123 456 7890</p>
-        <div class="social-icons">
-            <a href="mailto:support@edu2one.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            <a href="#" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        </div>
-    </footer>
-
-    </div>
-
-    <!-- AI Assistant Icon -->
-    <div class="ai-assistant-icon" onclick="toggleChatBox()">
-        <div class="icon-circle">
-            <span class="icon-question">?</span>
-        </div>
-    </div>
-
-     <!-- Chat Box -->
-     <div class="chat-box" id="chatBox">
-        <div class="chat-header">
-            <h3>AI Assistant</h3>
-            <button onclick="toggleChatBox()">✖</button>
-        </div>
-        <div class="chat-body" id="chatBody">
-            <div class="message ai-message">Hi! How can I help you today?</div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="userQuestion" placeholder="Type your message..." />
-            <button onclick="sendQuestion()">Send</button>
-        </div>
-    </div>
-
-    <!-- Script để xử lý chat box -->
-    <script>
-        function toggleChatBox() {
-            const chatBox = document.getElementById('chatBox');
-            chatBox.style.display = chatBox.style.display === 'none' || chatBox.style.display === '' ? 'flex' : 'none';
-        }
-
-        function sendQuestion() {
-            const userQuestion = document.getElementById('userQuestion').value;
-            const chatBody = document.getElementById('chatBody');
-
-            if (userQuestion.trim() !== '') {
-                // Hiển thị tin nhắn người dùng
-                const userMessage = document.createElement('div');
-                userMessage.className = 'message user-message';
-                userMessage.textContent = userQuestion;
-                chatBody.appendChild(userMessage);
-
-                // Trả lời của AI
-                const aiMessage = document.createElement('div');
-                aiMessage.className = 'message ai-message';
-                aiMessage.textContent = generateResponse(userQuestion);
-                chatBody.appendChild(aiMessage);
-
-                // Xóa nội dung input
-                document.getElementById('userQuestion').value = '';
-
-                // Cuộn xuống cuối
-                chatBody.scrollTop = chatBody.scrollHeight;
-            }
-        }
-
-        function generateResponse(question) {
-            return `AI Response to: "${question}"`;
-        }
-    </script>
+        <footer class="footer">
+            <div class="footer-content">
+                <!-- Legal Information Section (Bên trái) -->
+                <div class="legal-info">
+                    <p>© 2024 Hootsuite Inc. All Rights Reserved.</p>
+                    <a href="#">Legal Center</a> | <a href="#">Trust Center</a> | <a href="#">Privacy</a> | 
+                    <a href="#">Cookie preferences</a> | <a href="#">Accessibility</a>
+                </div>
+                
+                <!-- Social Media Links (Bên phải) -->
+                <div class="social-media">
+                    <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook"></i> <!-- Facebook Icon -->
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+                    </a>
+                    <a href="mailto:example@mail.com" target="_blank" class="social-icon">
+                        <i class="fas fa-envelope"></i> <!-- Email Icon -->
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+          document.querySelector('.nav-links').classList.toggle('active');
+        });
+        </script>
+        
