@@ -230,116 +230,205 @@
     height: 14px;
     margin-right: 10px;
   }
-   /* Add styles for the clickable week sections */
-   .week-button {
-    font-size: 18px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
+   /* Container */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
 
-  .week-button:hover {
-    background-color: #45a049;
-  }
+/* Action Buttons */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-  .week-table {
-    display: none;
-    margin-top: 20px;
-  }
+.actions .btn {
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
-  .week-table table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+.actions .btn:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
 
-  .week-table th, .week-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-  }
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 14px;
+}
+
+table th {
+  background-color: var(--background-color);
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+table td {
+  background-color: white;
+  color: var(--text-color);
+}
+
+table td.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+table td.actions button {
+  background-color: transparent;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 8px 15px;
+  color: var(--secondary-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+table td.actions button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .container {
-    width: 100%;
-    max-width: 150%; /* Increase max-width for better responsiveness on larger screens */
-    margin: 0 auto; /* Add a little more space around the container */
-    border-radius: 15px; /* Rounded corners for a smoother look */
-    padding: 25px; /* Add padding inside the container for better spacing */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add a smooth transition for hover effects */
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      width: 95%; /* Slightly wider container on smaller screens */
-    }
-  }
-  
-
-  .tabs {
-    display: flex;
-    background: var(--primary-color);
-    color: #fff;
-    margin-top: 20px; /* Khoảng cách phía trên để tránh header */
-
-  }
-
-  .tabs button {
-    flex: 1;
     padding: 15px;
-    border: none;
-    background: var(--primary-color);
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
   }
 
-  .tabs button:hover {
-    background: #d14036;
-  }
-
-  .tabs button.active {
-    background: var(--secondary-color);
-  }
-
-  .tab-content {
-    display: none;
-    padding: 20px;
-    overflow: auto; /* Đảm bảo không bị ẩn nếu nội dung lớn */
-  }
-
-  .tab-content.active {
-    display: block;
-  }
-
-  table {
-    width: 100%; /* Hoặc giá trị bạn muốn, có thể dùng pixel như 1200px */
-    max-width: 100%; /* Đảm bảo bảng không vượt quá khung chứa */
-    border-collapse: collapse;
-    margin-top: 20px;
-    overflow-x: auto; /* Thêm cuộn ngang nếu nội dung vượt khung */
+  .actions .btn {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
   table th,
   table td {
-    padding: 10px 15px;
-    text-align: left;
-    border: 1px solid #ddd;
-    white-space: nowrap; /* Giữ nội dung trên một dòng */
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+/* Week Selector Styling */
+.week-selector {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  transform: translateY(68px); /* Dịch chuyển xuống 30px */
+  margin-left: 20px; /* Dịch chuyển sang phải */
+
+}
+
+.week-selector .week-btn {
+  padding: 10px 18px;
+  background:  var(--primary-color);
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.week-selector .week-btn:hover {
+  background-color: white;
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);  
+}
+
+.week-selector .week-btn.active {
+  background-color: var(--secondary-color);
+  color: white;
+  border-color: var(--secondary-color);
+}
+
+/* Week Content Styling */
+.week-content {
+  display: none;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.week-content.active {
+  display: block;
+}
+
+/* Actions Buttons in Week Content */
+.week-content .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.week-content .actions .btn {
+  padding: 10px 18px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 14px;
+  font-family: var(--font-family);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.week-content .actions .btn:hover {
+  background-color:var(--secondary-color);  
+  color: var(--background-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .week-selector .week-btn {
+    font-size: 12px;
+    padding: 8px 12px;
   }
 
-  table th {
-    background: var(--primary-color);
-    color: #fff;
+  .week-content .actions .btn {
+    font-size: 12px;
+    padding: 8px 12px;
   }
-
-  table tr:nth-child(odd) {
-    background: #f9f9f9;
+}
+  .add-module,
+  .import,
+  .export {
+      z-index: 9999; /* Đảm bảo các nút không bị che khuất */
+      pointer-events: auto; /* Đảm bảo các nút có thể được nhấn */
   }
+  
 
-  table tr:nth-child(even) {
-    background: #fff;
+  input[type="file"] {
+    display: none;
   }
