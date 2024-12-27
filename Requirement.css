@@ -1,0 +1,151 @@
+:root {
+    --primary-color: #FF4E42;
+    --secondary-color: #313140;
+    --background-color: #f9f9f9;
+    --text-color: #515164;
+    --font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 1.25rem;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes tabFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 0.625rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    margin: 0;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-left: 0.2rem;
+}
+
+.tab {
+    color: #313140;
+    background: #f9f9f9;
+    padding: 0.625rem;
+    cursor: pointer;
+    animation: tabFadeIn 0.5s forwards;
+}
+
+/* Animation delay */
+.tab:nth-child(1) { animation-delay: 0s; }
+.tab:nth-child(2) { animation-delay: 0.1s; }
+.tab:nth-child(3) { animation-delay: 0.2s; }
+.tab:nth-child(4) { animation-delay: 0.3s; }
+.tab:nth-child(5) { animation-delay: 0.4s; }
+
+.tab:hover {
+    color: #FF4E42; 
+}
+
+.menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #515164;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu-content.active {
+    display: block;
+}
+
+.menu-content a {
+    display: block;
+    padding: 0.625rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    color: #FF4E42;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-start;
+   
+    padding: 0.3rem;
+    color: #FF4E42;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.footer:hover {
+    color: #515164;
+}
+
+.button {
+    color:  #FF4E42; 
+    border: 0.0625rem solid #FF4E42; 
+    padding: 0.2rem 0.5rem; /* Padding for the button */
+    border-radius: 0.8rem; 
+    transition: color 0.3s, border-color 0.3s; 
+    font-weight: bold;
+
+}
+.button:hover {
+    color:#515164 ;
+
+}
+
+.description {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.descriptions {
+    margin-top: 3rem;
+}
+
+.logo{
+color:#FF4E42;
+}
+
+
+.req {
+    color:#515164 ;
+    text-align: center;
+
+}

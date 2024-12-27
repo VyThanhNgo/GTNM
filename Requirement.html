@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One3Learn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Requirement.css">
+
+</head>
+<body>
+
+<div class="navbar">
+    <h1 onclick="window.location.href='home.html'"><a class="logo"> One3Learn </a></h1>
+    <div class="tabs">
+        <div class="tab" onclick="window.location.href='Course_managment.html'">Course Management</div>
+        <div class="tab" onclick="window.location.href='Study_note.html'">Study Notes</div>
+        <div class="tab" onclick="window.location.href='Track_progress.html'">Track Progress</div>
+        <div class="tab" onclick="window.location.href='Test.html'">Test</div>
+        <div class="tab" onclick="window.location.href='Community.html'">Community</div>
+    </div>
+    <div class="menu" onclick="toggleMenu()">
+        <i class="fas fa-ellipsis-v"></i>
+        <div class="menu-content" id="menuContent">
+            <a href="home.html">Home</a>
+            <a href="javascript:history.back()">Back</a>
+            <a href="#">LogOut</a>
+        </div>
+    </div>
+</div>
+
+<div class="descriptions">
+    <h1 class= "req"> Requirement</h1>
+    <div class="description"><strong>Track Progress:</strong> This section allows you to monitor your academic performance over time. You can view your completed modules, scores, and analyze your strengths and weaknesses to optimize your study strategy.</div>
+    <div class="description"><strong>Test:</strong> Want to assess your knowledge? Click on this tab to access various quizzes and tests designed to evaluate your understanding of the course material. Review your answers and get instant feedback!</div>
+    <div class="description"><strong>Community:</strong> Join the lively community of learners! Here, you can engage in discussions with fellow students, ask questions, and share insights. Collaborate with others to enhance your learning experience.</div>
+    <div class="description"><strong>Course Management:</strong> Manage all your courses in one convenient place. Enroll in new courses, track assignments, and keep up with deadlines. Make sure you’re on top of your learning journey!</div>
+    <div class="description"><strong>Study Notes:</strong> This feature allows you to create and organize your study materials effectively. Take notes during lectures, highlight key concepts, and revisit them whenever you need to prepare for exams.</div>
+</div>
+
+<div class="footer">
+    <a href="home.html" class="button">Back</a>
+</div>
+
+<script src="Requirement.js"></script>
+
+</body>
+</html>

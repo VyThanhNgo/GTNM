@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One3Learn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Track_progress.css">
+</head> 
+<body>
+
+<div class="navbar">
+    <h1 onclick="window.location.href='home.html'"><a class="logo"> One3Learn </a></h1>
+    <div class="tabs1">
+        <div class="tab1" onclick="window.location.href='Course_management.html'">Course Management</div>
+        <div class="tab1" onclick="window.location.href='Study_notes.html'">Study Notes</div>
+        <div class="tab1" onclick="window.location.href='Track_progress.html'">Track Progress</div>
+        <div class="tab1" onclick="window.location.href='Test.html'">Test</div>
+        <div class="tab1" onclick="window.location.href='Community.html'">Community</div>
+    </div>
+    <div class="menu" onclick="toggleMenu()">
+        <i class="fas fa-ellipsis-v"></i>
+        <div class="menu-content" id="menuContent">
+            <a href="home.html">Home</a>
+            <a href="Requirement.html">Back</a>
+            <a href="#">LogOut</a>
+        </div>
+    </div>
+</div>
+
+<div class="content-wrap">
+    <h1 class="center-text">Track Progress</h1>
+
+    <span class="tabs">
+        <div class="tab" onclick="showTab('overview')"><a class="track">Overview Progress</a></div>
+        <div class="tab" onclick="showTab('per-course')"><a class="track">Per-Course Progress</a></div>
+        <div class="tab" onclick="showTab('achievements')"><a class="track">Achievements</a></div>
+    </span> 
+
+    <div id="overview" class="section">
+        <h2> Overall Learning Progress </h2>
+        <div class="progress-bar">
+            <div class="progress1" style="width: 50%;">50%</div>
+        </div>
+        <p>Lessons Completed: 15/30</p>
+        <p>Total Hours: 10 hours</p>
+    </div>
+
+    <div id="per-course" class="section" style="display: none;">
+        <h2> Progress Per Course </h2>
+        <div class="progress-container">
+            <div class="progress-card">
+                <img src="./image/Beginner.jpg" alt="Beginner Course" style="width: 130px; height: 130px; border-radius: 5px;">
+                <h3>Beginner</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;">70%</div>
+                </div>
+                <a class="button" onclick="continueLearning('beginner')">Continue</a>
+            </div>
+            <div class="progress-card">
+                <img src="./image/Intermediate.jpg" alt="Intermediate Course" style="width: 130px; height: 130px; border-radius: 5px;">
+                <h3>Intermediate</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 40%;">40%</div>
+                </div>
+                <a class="button" onclick="continueLearning('intermediate')">Continue</a>
+            </div>
+            <div class="progress-card">
+                <img src="./image/Advanced.jpg" alt="Advanced Course" style="width: 130px; height: 130px; border-radius: 5px;">
+                <h3>Advanced</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;">80%</div>
+                </div>
+                <a class="button" onclick="continueLearning('advanced')">Continue</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="achievements" class="section" style="display: none;">
+        <h2> Personal Achievements  </h2>
+        <div>
+            <p><i class="fas fa-medal"></i> 📚 Complete 10 Lessons - Achieved</p>
+            <p><i class="fas fa-medal"></i> 💯 First Test Passed - Achieved</p>
+            <p><i class="fas fa-medal"></i> 🎓 Attend 5 Workshops - Achieved</p>
+            <p><i class="fas fa-medal"></i> 🏆 Score Above 90% in Final Exam - Achieved</p> 
+            <p><i class="fas fa-medal"></i> ❤️ Complete 30 Hours of Volunteering - Achieved</p> 
+            <p><i class="fas fa-medal"></i> 🌍 Master 5 New Languages - Achieved</p> 
+            <p><i class="fas fa-medal"></i> ⏰ Finish All Assigned Projects on Time - Achieved</p> 
+        </div>
+    </div>
+
+    <div class="input-container">
+        <input type="text" id="newTrack" placeholder="Enter your notes..." autofocus onkeypress="detectEnter(event)">
+        <a class="button1" onclick="addTrack()">Enter</a>
+    </div>
+
+    <div class="track-list-container">
+        <div class="track-list" id="trackList"></div>
+    </div>
+
+    <div class="footer">
+        <a href="Requirement.html" class="button"> Back </a>
+        <a class="button1" onclick="resetTracks()">Delete All</a>
+    </div>
+        
+</div>
+
+<script src="Track_progress.js"></script>
+</body>
+</html>
