@@ -1,0 +1,65 @@
+:root {
+    --primary-color: #FF4E42 !important; /* Màu chính: đỏ cam */
+    --secondary-color: #313140; /* Màu phụ: xám đậm */
+    --background-color: #f9f9f9; /* Màu nền: nhạt */
+    --text-color: #515164; /* Màu chữ: xám */
+    --font-family: 'Noto Sans', sans-serif; /* Font chữ */
+    --border-radius: 8px; /* Độ bo góc cho các phần tử */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 20px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid var(--text-color);
+    transition: box-shadow 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi hover */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 40px;
+}
+
+
+
+.unit-title-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+    border: none;
+    background-color: #ffffff;
+}
+.main-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #FF4E42 !important;
+}
+
+.card:hover {
+    background-color: #e9ecef;
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+    color: #FF4E42 !important;
+}
+.card-title text-primary {
+    color: #FF4E42 !important;
+}
