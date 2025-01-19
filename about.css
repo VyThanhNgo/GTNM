@@ -254,7 +254,7 @@ body {
 
 .member p {
     color: var(--text-color); /* Màu chữ phụ */
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.6;
     margin: 10px 0;
 }
