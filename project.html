@@ -1,498 +1,498 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-    <link rel="stylesheet" href="project.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-</head>
-<body>
-  <div class="header">
-    <!-- Left Side: Logo, Home, About, Courses, Progress, Tests -->
-    <div class="nav-left">
-      <div class="logo">
-        <a href="index.html">
-          <img src="image/logo3.png" alt="Logo">
-        </a>
-      </div>
-    </div>
-
-    <!-- Right Side: Community, Contact, Log in, Sign up, Language Selector -->
-    <div class="nav-right" id="nav-menu">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="groupdiary.html" class="nav-link">Group Diary</a>
-      <a href="project.html" class="nav-link">Project</a>
-      <a href="styleguide.html" class="nav-link">Style Guide</a>
-      <a href="result.html" class="nav-link">Result</a>
-    </div>
-  </div>
-
-   <!-- Main Section -->
-   <main class="main-content">
-    <!-- Project Tabs Section -->
-    <div class="project-tabs">
-      <div class="tab-buttons">
-        <button class="tab-button" data-tab="requirement" onclick="showTab('requirement')">Requirement</button>
-        <button class="tab-button" data-tab="design" onclick="showTab('design')">Design</button>
-        <button class="tab-button" data-tab="implementation" onclick="showTab('implementation')">Implementation</button>
-      </div>
-      
-      <!-- Content for Tabs -->
-      <div class="tab-content" id="requirement">
-        <table>
-            <thead>
-              <tr>
-                <th>STT</th>
-                <th>Function</th>
-                <th>Proposer</th>
-                <th>Designer</th>
-                <th>Implementer</th>
-                <th>Estimated Time</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Tab Home<br>Tab Study Notes</td>
-                <td>Ngo Thanh Vy</td>
-                <td>Tran Thi My Tram</td>
-                <td>Tran Thi My Tram</td>
-                <td>4 week</td>
-                <td>Completed</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Tab About Us<br>Tab Course Managment</td>
-                <td>Ngo Thanh Vy</td>
-                <td>Ngo Thanh Vy</td>
-                <td>Ngo Thanh Vy</td>
-                <td>4 week</td>
-                <td>Completed</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Tab Requirement - Web Group<br>Tab Track Progress</td>
-                <td>Ngo Thanh Vy</td>
-                <td>Cao Thi Kim Ngan</td>
-                <td>Cao Thi Kim Ngan</td>
-                <td>4 week</td>
-                <td>Completed</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Tab Design - Web Group<br>Tab Quiz</td>
-                <td>Ngo Thanh Vy</td>
-                <td>Tiet Thi Kim Tuyen</td>
-                <td>Tiet Thi Kim Tuyen</td>
-                <td>4 week</td>
-                <td>Completed</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Login / Register / Forgot Pass<br>Tab Forum<br>Tab Contact</td>
-                <td>Ngo Thanh Vy</td>
-                <td>Phan Thao Tien</td>
-                <td>Phan Thao Tien</td>
-                <td>4 week</td>
-                <td>Completed</td>
-            </tbody>
-          </table>
-      </div>
-
-      <!-- Design Tab Content -->
-<div class="tab-content" id="design">
-  <p>Design on paper for each feature, completed design, and HTML files for each function.</p>
-
-
-<!-- Feature 1: Home -->
-<div class="design-section">
-  <h4 onclick="toggleDesignSection(this)">Feature 1: Home - Designer: Tran Thi My Tram <span>▶</span></h4>
-  <div class="design-row">
-    <div class="design-images">
-      <div class="image">
-        <h5>Design on Paper</h5>
-        <div class="image-container">
-          <img src="image/design1.jpg" alt="Design on Paper" class="design-image" onclick="openModal(this)">
-          <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Project</title>
+      <link rel="stylesheet" href="project.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+  <body>
+    <div class="header">
+      <!-- Left Side: Logo, Home, About, Courses, Progress, Tests -->
+      <div class="nav-left">
+        <div class="logo">
+          <a href="index.html">
+            <img src="image/logo3.png" alt="Logo">
+          </a>
         </div>
       </div>
-      <div class="image">
-        <h5>Completed Design</h5>
-        <div class="image-container">
-          <img src="image/home.png" alt="Completed Design" class="design-image">
-          <!-- Overlay với chữ Go to Page và mở trong tab mới -->
-          <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/index.html', '_blank')">
-            Go to Page
+
+      <!-- Right Side: Community, Contact, Log in, Sign up, Language Selector -->
+      <div class="nav-right" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="groupdiary.html" class="nav-link">Group Diary</a>
+        <a href="project.html" class="nav-link">Project</a>
+        <a href="styleguide.html" class="nav-link">Style Guide</a>
+        <a href="result.html" class="nav-link">Result</a>
+      </div>
+    </div>
+
+    <!-- Main Section -->
+    <main class="main-content">
+      <!-- Project Tabs Section -->
+      <div class="project-tabs">
+        <div class="tab-buttons">
+          <button class="tab-button" data-tab="requirement" onclick="showTab('requirement')">Requirement</button>
+          <button class="tab-button" data-tab="design" onclick="showTab('design')">Design</button>
+          <button class="tab-button" data-tab="implementation" onclick="showTab('implementation')">Implementation</button>
+        </div>
+        
+        <!-- Content for Tabs -->
+        <div class="tab-content" id="requirement">
+          <table>
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Function</th>
+                  <th>Proposer</th>
+                  <th>Designer</th>
+                  <th>Implementer</th>
+                  <th>Estimated Time</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Tab Home<br>Tab Study Notes</td>
+                  <td>Ngo Thanh Vy</td>
+                  <td>Tran Thi My Tram</td>
+                  <td>Tran Thi My Tram</td>
+                  <td>4 week</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Tab About Us<br>Tab Course Managment</td>
+                  <td>Ngo Thanh Vy</td>
+                  <td>Ngo Thanh Vy</td>
+                  <td>Ngo Thanh Vy</td>
+                  <td>4 week</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Tab Requirement - Web Group<br>Tab Track Progress</td>
+                  <td>Ngo Thanh Vy</td>
+                  <td>Cao Thi Kim Ngan</td>
+                  <td>Cao Thi Kim Ngan</td>
+                  <td>4 week</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Tab Design - Web Group<br>Tab Quiz</td>
+                  <td>Ngo Thanh Vy</td>
+                  <td>Tiet Thi Kim Tuyen</td>
+                  <td>Tiet Thi Kim Tuyen</td>
+                  <td>4 week</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Login / Register / Forgot Pass<br>Tab Forum<br>Tab Contact</td>
+                  <td>Ngo Thanh Vy</td>
+                  <td>Phan Thao Tien</td>
+                  <td>Phan Thao Tien</td>
+                  <td>4 week</td>
+                  <td>Completed</td>
+              </tbody>
+            </table>
+        </div>
+
+        <!-- Design Tab Content -->
+  <div class="tab-content" id="design">
+    <p>Design on paper for each feature, completed design, and HTML files for each function.</p>
+
+
+  <!-- Feature 1: Home -->
+  <div class="design-section">
+    <h4 onclick="toggleDesignSection(this)">Feature 1: Home - Designer: Tran Thi My Tram <span>▶</span></h4>
+    <div class="design-row">
+      <div class="design-images">
+        <div class="image">
+          <h5>Design on Paper</h5>
+          <div class="image-container">
+            <img src="image/homedesign.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
+            <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+          </div>
+        </div>
+        <div class="image">
+          <h5>Completed Design</h5>
+          <div class="image-container">
+            <img src="image/home.png" alt="Completed Design" class="design-image">
+            <!-- Overlay với chữ Go to Page và mở trong tab mới -->
+            <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/index.html', '_blank')">
+              Go to Page
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="button-container">
-      <a href="code/index.zip" download class="design-link">Download File HTML</a>
+      <div class="button-container">
+        <a href="code/index.zip" download class="design-link">Download File HTML</a>
+      </div>
     </div>
   </div>
-</div>
 
 
-<!-- Feature 2: About Us -->
-<div class="design-section">
-  <h4 onclick="toggleDesignSection(this)">Feature 2: About Us - Designer: Ngo Thanh Vy <span>▶</span></h4>
-  <div class="design-row">
-    <div class="design-images">
-      <div class="image">
-        <h5>Design on Paper</h5>
-        <div class="image-container">
-          <img src="image/code1.jpg" alt="Design on Paper" class="design-image" onclick="openModal(this)">
-          <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+  <!-- Feature 2: About Us -->
+  <div class="design-section">
+    <h4 onclick="toggleDesignSection(this)">Feature 2: About Us - Designer: Ngo Thanh Vy <span>▶</span></h4>
+    <div class="design-row">
+      <div class="design-images">
+        <div class="image">
+          <h5>Design on Paper</h5>
+          <div class="image-container">
+            <img src="image/aboutdesign.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
+            <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+          </div>
         </div>
-      </div>
-      <div class="image">
-        <h5>Completed Design</h5>
-        <div class="image-container">
-          <img src="image/about.png" alt="Completed Design" class="design-image">
-          <!-- Overlay với chữ Go to Page và mở trong tab mới -->
-          <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/about.html', '_blank')">
-            Go to Page
+        <div class="image">
+          <h5>Completed Design</h5>
+          <div class="image-container">
+            <img src="image/about.png" alt="Completed Design" class="design-image">
+            <!-- Overlay với chữ Go to Page và mở trong tab mới -->
+            <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/about.html', '_blank')">
+              Go to Page
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="button-container">
-      <a href="code/about.zip" download class="design-link">Download File HTML</a>
+      <div class="button-container">
+        <a href="code/about.zip" download class="design-link">Download File HTML</a>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Feature 3: Course Management -->
-<div class="design-section">
-  <h4 onclick="toggleDesignSection(this)">Feature 3: Course Management - Designer: Ngo Thanh Vy <span>▶</span></h4>
-  <div class="design-row">
-    <div class="design-images">
-      <div class="image">
-        <h5>Design on Paper</h5>
-        <div class="image-container">
-          <img src="design_images/feature3_paper.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
-          <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+  <!-- Feature 3: Course Management -->
+  <div class="design-section">
+    <h4 onclick="toggleDesignSection(this)">Feature 3: Course Management - Designer: Ngo Thanh Vy <span>▶</span></h4>
+    <div class="design-row">
+      <div class="design-images">
+        <div class="image">
+          <h5>Design on Paper</h5>
+          <div class="image-container">
+            <img src="image/design1.jpg" alt="Design on Paper" class="design-image" onclick="openModal(this)">
+            <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+          </div>
         </div>
-      </div>
-      <div class="image">
-        <h5>Completed Design</h5>
-        <div class="image-container">
-          <img src="image/code1.jpg" alt="Completed Design" class="design-image">
-          <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/course.html', '_blank')">
-            Go to Page
+        <div class="image">
+          <h5>Completed Design</h5>
+          <div class="image-container">
+            <img src="image/code1.jpg" alt="Completed Design" class="design-image">
+            <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/course.html', '_blank')">
+              Go to Page
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="button-container">
-      <a href="code/course.zip" download class="design-link">Download File HTML</a>
+      <div class="button-container">
+        <a href="code/course.zip" download class="design-link">Download File HTML</a>
+      </div>
     </div>
   </div>
-</div>
 
 
-<!-- Feature 4: Quiz -->
-<div class="design-section">
-  <h4 onclick="toggleDesignSection(this)">Feature 4: Quiz - Designer: Tiet Thi Kim Tuyen <span>▶</span></h4>
-  <div class="design-row">
-    <div class="design-images">
-      <div class="image">
-        <h5>Design on Paper</h5>
-        <div class="image-container">
-          <img src="design_images/feature4_paper.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
-          <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
-        </div>
-      </div>
-      <div class="image">
-        <h5>Completed Design</h5>
-        <div class="image-container">
-          <img src="image/quiz.png" alt="Completed Design" class="design-image">
-          <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/test1.html', '_blank')">Go to Page</div>
-        </div>
-      </div>
-    </div>
-    <div class="button-container">
-      <a href="code/quiz.zip" download class="design-link">Download File HTML</a>
-    </div>
-  </div>
-</div>
-
-<!-- Feature 5: Study Notes -->
-<div class="design-section">
-  <h4 onclick="toggleDesignSection(this)">Feature 5: Study Notes - Designer: Tran Thi My Tram <span>▶</span></h4>
-  <div class="design-row">
-    <div class="design-images">
-      <div class="image">
-        <h5>Design on Paper</h5>
-        <div class="image-container">
-          <img src="design_images/feature5_paper.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
-          <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
-        </div>
-      </div>
-      <div class="image">
-        <h5>Completed Design</h5>
-        <div class="image-container">
-          <img src="image/note.png" alt="Completed Design" class="design-image">
-          <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/note.html', '_blank')">Go to Page</div>
-        </div>
-      </div>
-    </div>
-    <div class="button-container">
-      <a href="code/note.zip" download class="design-link">Download File HTML</a>
-    </div>
-  </div>
-</div>
-
-<!-- Feature 6: Track Progress -->
-<div class="design-section">
-  <h4 onclick="toggleDesignSection(this)">Feature 6: Track Progress - Designer: Cao Thi Kim Ngan <span>▶</span></h4>
-  <div class="design-row">
-    <div class="design-images">
-      <div class="image">
-        <h5>Design on Paper</h5>
-        <div class="image-container">
-          <img src="design_images/feature6_paper.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
-          <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
-        </div>
-      </div>
-      <div class="image">
-        <h5>Completed Design</h5>
-        <div class="image-container">
-          <img src="image/track.png" alt="Completed Design" class="design-image">
-          <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/trackprogress.html', '_blank')">Go to Page</div>
-        </div>
-      </div>
-    </div>
-    <div class="button-container">
-      <a href="code/trackprogress.zip" download class="design-link">Download File HTML</a>
-    </div>
-  </div>
-</div>
-
-<!-- Feature 7: Forum -->
-<div class="design-section">
-  <h4 onclick="toggleDesignSection(this)">Feature 7: Forum - Designer: Phan Thao Tien <span>▶</span></h4>
-  <div class="design-row">
-    <div class="design-images">
-      <div class="image">
-        <h5>Design on Paper</h5>
-        <div class="image-container">
-          <img src="design_images/feature7_paper.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
-          <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
-        </div>
-      </div>
-      <div class="image">
-        <h5>Completed Design</h5>
-        <div class="image-container">
-          <img src="image/forum.png" alt="Completed Design" class="design-image">
-          <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/forum.html', '_blank')">Go to Page</div>
-        </div>
-      </div>
-    </div>
-    <div class="button-container">
-      <a href="code/forum.zip" download class="design-link">Download File HTML</a>
-    </div>
-  </div>
-</div>
-
-<!-- Feature 8: Contact -->
-<div class="design-section">
-  <h4 onclick="toggleDesignSection(this)">Feature 8: Contact - Designer: Phan Thao Tien <span>▶</span></h4>
-  <div class="design-row">
-    <div class="design-images">
-      <div class="image">
-        <h5>Design on Paper</h5>
-        <div class="image-container">
-          <img src="design_images/feature8_paper.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
-          <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
-        </div>
-      </div>
-      <div class="image">
-        <h5>Completed Design</h5>
-        <div class="image-container">
-          <img src="image/contact.png" alt="Completed Design" class="design-image">
-          <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/contact.html', '_blank')">Go to Page</div>
-        </div>
-      </div>
-    </div>
-    <div class="button-container">
-      <a href="code/contact.zip" download class="design-link">Download File HTML</a>
-    </div>
-  </div>
-</div>
-
-<!-- Feature 9: Login/Register/Forgot Password -->
-<div class="design-section">
-  <h4 onclick="toggleDesignSection(this)">Feature 9: Login/Register/Forgot Password - Designer: Phan Thao Tien <span>▶</span></h4>
-  <div class="design-row">
-    <div class="design-images">
-      <div class="image">
-        <h5>Design on Paper</h5>
-        <div class="image-container">
-          <img src="design_images/feature9_paper.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
-          <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
-        </div>
-      </div>
-      <div class="image">
-        <h5>Completed Design</h5>
-        <div class="image-container">
-          <img src="image/login.png" alt="Completed Design" class="design-image">
-          <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/login.html', '_blank')">Go to Page</div>
-        </div>
-      </div>
-    </div>
-    <div class="button-container">
-      <a href="code/login.zip" download class="design-link">Download File HTML</a>
-    </div>
-  </div>
-</div>
-
-<!-- Modal -->
-<div id="imageModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImage">
-</div>
-<div>
-  <!-- Nút Download All Files -->
-<div class="button-container">
-  <a href="code/filecode.zip" download class="design-link">
-    <button class="download-all-btn">Download All Files HTML</button>
-  </a>
-</div>
-</div>
-</div> 
-<div>
- </div>
-<!-- Implementation Tab Content -->
-<div class="tab-content" id="implementation">
-    <p>This section displays links to the implementation of each feature with a "Go to Page" button.</p>
-    
-    <!-- Implementation Section -->
-    <div class="implementation-section">
-        <h4 onclick="toggleImplementationSection(this)">Feature 1: Home - Developer: Tran Thi My Tram <span>▶</span></h4>
-        <div class="implementation-row">
-            <iframe src="https://vythanhngo.github.io/One3Learn/index.html" class="implementation-iframe" frameborder="0"></iframe>
-            <button onclick="window.open('https://vythanhngo.github.io/One3Learn/index.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
-        </div>
-    </div>
-
-    <div class="implementation-section">
-        <h4 onclick="toggleImplementationSection(this)">Feature 2: About Us - Developer: Ngo Thanh Vy <span>▶</span></h4>
-        <div class="implementation-row">
-            <iframe src="https://vythanhngo.github.io/One3Learn/about.html" class="implementation-iframe" frameborder="0"></iframe>
-            <button onclick="window.open('https://vythanhngo.github.io/One3Learn/about.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
-        </div>
-    </div>
-
-    <!-- Repeat for other features -->
-    <div class="implementation-section">
-        <h4 onclick="toggleImplementationSection(this)">Feature 3: Course Management - Developer: Ngo Thanh Vy <span>▶</span></h4>
-        <div class="implementation-row">
-          <iframe src="https://vythanhngo.github.io/One3Learn/course.html" class="implementation-iframe" frameborder="0"></iframe>
-          <button onclick="location.href='https://vythanhngo.github.io/One3Learn/course.html#'" class="btn-go-to-page">Go to Page</button>
+  <!-- Feature 4: Quiz -->
+  <div class="design-section">
+    <h4 onclick="toggleDesignSection(this)">Feature 4: Quiz - Designer: Tiet Thi Kim Tuyen <span>▶</span></h4>
+    <div class="design-row">
+      <div class="design-images">
+        <div class="image">
+          <h5>Design on Paper</h5>
+          <div class="image-container">
+            <img src="image/quizdesign.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
+            <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
           </div>
-    </div>
-    <div class="implementation-section">
-      <h4 onclick="toggleImplementationSection(this)">Feature 4: Quiz - Developer: Tiet Thi Kim Tuyen <span>▶</span></h4>
-      <div class="implementation-row">
-        <iframe src="https://vythanhngo.github.io/One3Learn/les1.html" class="implementation-iframe" frameborder="0"></iframe>
-        <button onclick="location.href='https://vythanhngo.github.io/One3Learn/les1.html'" class="btn-go-to-page">Go to Page</button>
         </div>
-  </div>
-    <div class="implementation-section">
-        <h4 onclick="toggleImplementationSection(this)">Feature 5: Study Notes - Developer: Tran Thi My Tram <span>▶</span></h4>
-        <div class="implementation-row">
-          <iframe src="https://vythanhngo.github.io/One3Learn/note.html" class="implementation-iframe" frameborder="0"></iframe>
-          <button onclick="window.open('https://vythanhngo.github.io/One3Learn/note.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
+        <div class="image">
+          <h5>Completed Design</h5>
+          <div class="image-container">
+            <img src="image/quiz.png" alt="Completed Design" class="design-image">
+            <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/test1.html', '_blank')">Go to Page</div>
+          </div>
         </div>
-    </div>
-    <div class="implementation-section">
-        <h4 onclick="toggleImplementationSection(this)">Feature 6: Track Progress - Developer: Cao Thi Kim Ngan <span>▶</span></h4>
-        <div class="implementation-row">
-          <iframe src="https://vythanhngo.github.io/One3Learn/trackprogress.html" class="implementation-iframe" frameborder="0"></iframe>
-          <button onclick="window.open('https://vythanhngo.github.io/One3Learn/trackprogress.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
-        </div>
-    </div>
-    <div class="implementation-section">
-        <h4 onclick="toggleImplementationSection(this)">Feature 7: Forum - Developer: Phan Thao Tien <span>▶</span></h4>
-        <div class="implementation-row">
-          <iframe src="https://vythanhngo.github.io/One3Learn/forum.html" class="implementation-iframe" frameborder="0"></iframe>
-          <button onclick="window.open('https://vythanhngo.github.io/One3Learn/forum.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
-        </div>
-    </div>
-    <div class="implementation-section">
-        <h4 onclick="toggleImplementationSection(this)">Feature 8: Contact - Developer: Phan Thao Tien <span>▶</span></h4>
-        <div class="implementation-row">
-          <iframe src="https://vythanhngo.github.io/One3Learn/contact.html" class="implementation-iframe" frameborder="0"></iframe>
-            <button onclick="window.open('https://vythanhngo.github.io/One3Learn/contact.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
-        </div>
-    </div>
-    <div class="implementation-section">
-        <h4 onclick="toggleImplementationSection(this)">Feature 9: Login/Register/Forgot Password - Developer: Phan Thao Tien <span>▶</span></h4>
-        <div class="implementation-row">
-          <iframe src="https://vythanhngo.github.io/One3Learn/index.html" class="implementation-iframe" frameborder="0"></iframe>
-          <button onclick="window.open('https://vythanhngo.github.io/One3Learn/index.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
-        </div>
-    </div>
-    <div class="implementation-section">
-      <h4 onclick="toggleImplementationSection(this)">Feature 10: Requirement - Developer: Cao Thi Kim Ngan <span>▶</span></h4>
-      <div class="implementation-row">
-          <iframe src="https://vythanhngo.github.io/One3Learn/feature9.html" class="implementation-iframe" frameborder="0"></iframe>
-          <button onclick="window.open('https://vythanhngo.github.io/One3Learn/feature9.html', '_blank')" class="btn-go-to-page">Go to Page</button>
       </div>
-  </div>
-  
-  <div class="implementation-section">
-      <h4 onclick="toggleImplementationSection(this)">Feature 11: Design - Developer: Tiet Thi Kim Tuyen <span>▶</span></h4>
-      <div class="implementation-row">
-          <iframe src="https://vythanhngo.github.io/One3Learn/feature10.html" class="implementation-iframe" frameborder="0"></iframe>
-          <button onclick="window.open('https://vythanhngo.github.io/One3Learn/feature10.html', '_blank')" class="btn-go-to-page">Go to Page</button>
+      <div class="button-container">
+        <a href="code/quiz.zip" download class="design-link">Download File HTML</a>
       </div>
+    </div>
+  </div>
+
+  <!-- Feature 5: Study Notes -->
+  <div class="design-section">
+    <h4 onclick="toggleDesignSection(this)">Feature 5: Study Notes - Designer: Tran Thi My Tram <span>▶</span></h4>
+    <div class="design-row">
+      <div class="design-images">
+        <div class="image">
+          <h5>Design on Paper</h5>
+          <div class="image-container">
+            <img src="image/note.jpg" alt="Design on Paper" class="design-image" onclick="openModal(this)">
+            <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+          </div>
+        </div>
+        <div class="image">
+          <h5>Completed Design</h5>
+          <div class="image-container">
+            <img src="image/note.png" alt="Completed Design" class="design-image">
+            <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/note.html', '_blank')">Go to Page</div>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <a href="code/note.zip" download class="design-link">Download File HTML</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 6: Track Progress -->
+  <div class="design-section">
+    <h4 onclick="toggleDesignSection(this)">Feature 6: Track Progress - Designer: Cao Thi Kim Ngan <span>▶</span></h4>
+    <div class="design-row">
+      <div class="design-images">
+        <div class="image">
+          <h5>Design on Paper</h5>
+          <div class="image-container">
+            <img src="image/design3.jpg" alt="Design on Paper" class="design-image" onclick="openModal(this)">
+            <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+          </div>
+        </div>
+        <div class="image">
+          <h5>Completed Design</h5>
+          <div class="image-container">
+            <img src="image/track.png" alt="Completed Design" class="design-image">
+            <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/trackprogress.html', '_blank')">Go to Page</div>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <a href="code/trackprogress.zip" download class="design-link">Download File HTML</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 7: Forum -->
+  <div class="design-section">
+    <h4 onclick="toggleDesignSection(this)">Feature 7: Forum - Designer: Phan Thao Tien <span>▶</span></h4>
+    <div class="design-row">
+      <div class="design-images">
+        <div class="image">
+          <h5>Design on Paper</h5>
+          <div class="image-container">
+            <img src="image/forum.jpg" alt="Design on Paper" class="design-image" onclick="openModal(this)">
+            <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+          </div>
+        </div>
+        <div class="image">
+          <h5>Completed Design</h5>
+          <div class="image-container">
+            <img src="image/forum.png" alt="Completed Design" class="design-image">
+            <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/forum.html', '_blank')">Go to Page</div>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <a href="code/forum.zip" download class="design-link">Download File HTML</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 8: Contact -->
+  <div class="design-section">
+    <h4 onclick="toggleDesignSection(this)">Feature 8: Contact - Designer: Phan Thao Tien <span>▶</span></h4>
+    <div class="design-row">
+      <div class="design-images">
+        <div class="image">
+          <h5>Design on Paper</h5>
+          <div class="image-container">
+            <img src="image/contact.jpg" alt="Design on Paper" class="design-image" onclick="openModal(this)">
+            <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+          </div>
+        </div>
+        <div class="image">
+          <h5>Completed Design</h5>
+          <div class="image-container">
+            <img src="image/contact.png" alt="Completed Design" class="design-image">
+            <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/contact.html', '_blank')">Go to Page</div>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <a href="code/contact.zip" download class="design-link">Download File HTML</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 9: Login/Register/Forgot Password -->
+  <div class="design-section">
+    <h4 onclick="toggleDesignSection(this)">Feature 9: Login/Register/Forgot Password - Designer: Phan Thao Tien <span>▶</span></h4>
+    <div class="design-row">
+      <div class="design-images">
+        <div class="image">
+          <h5>Design on Paper</h5>
+          <div class="image-container">
+            <img src="image/longin.png" alt="Design on Paper" class="design-image" onclick="openModal(this)">
+            <div class="overlay" onclick="openModal(this.previousElementSibling)">View Image</div>
+          </div>
+        </div>
+        <div class="image">
+          <h5>Completed Design</h5>
+          <div class="image-container">
+            <img src="image/login.png" alt="Completed Design" class="design-image">
+            <div class="overlay go-to-page-overlay" onclick="window.open('https://vythanhngo.github.io/One3Learn/login.html', '_blank')">Go to Page</div>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <a href="code/login.zip" download class="design-link">Download File HTML</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
   </div>
   <div>
+    <!-- Nút Download All Files -->
+  <div class="button-container">
+    <a href="code/filecode.zip" download class="design-link">
+      <button class="download-all-btn">Download All Files HTML</button>
+    </a>
   </div>
-</main>
+  </div>
+  </div> 
+  <div>
+  </div>
+  <!-- Implementation Tab Content -->
+  <div class="tab-content" id="implementation">
+      <p>This section displays links to the implementation of each feature with a "Go to Page" button.</p>
+      
+      <!-- Implementation Section -->
+      <div class="implementation-section">
+          <h4 onclick="toggleImplementationSection(this)">Feature 1: Home - Developer: Tran Thi My Tram <span>▶</span></h4>
+          <div class="implementation-row">
+              <iframe src="https://vythanhngo.github.io/One3Learn/index.html" class="implementation-iframe" frameborder="0"></iframe>
+              <button onclick="window.open('https://vythanhngo.github.io/One3Learn/index.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
+          </div>
+      </div>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-left">
-        <img src="image/logo3.png" alt="Logo" class="footer-logo">
-        <p class="footer-description">Enhancing your learning experience with the best tools and resources.</p>
+      <div class="implementation-section">
+          <h4 onclick="toggleImplementationSection(this)">Feature 2: About Us - Developer: Ngo Thanh Vy <span>▶</span></h4>
+          <div class="implementation-row">
+              <iframe src="https://vythanhngo.github.io/One3Learn/about.html" class="implementation-iframe" frameborder="0"></iframe>
+              <button onclick="window.open('https://vythanhngo.github.io/One3Learn/about.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
+          </div>
       </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="course.html">Course</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+
+      <!-- Repeat for other features -->
+      <div class="implementation-section">
+          <h4 onclick="toggleImplementationSection(this)">Feature 3: Course Management - Developer: Ngo Thanh Vy <span>▶</span></h4>
+          <div class="implementation-row">
+            <iframe src="https://vythanhngo.github.io/One3Learn/course.html" class="implementation-iframe" frameborder="0"></iframe>
+            <button onclick="location.href='https://vythanhngo.github.io/One3Learn/course.html#'" class="btn-go-to-page">Go to Page</button>
+            </div>
       </div>
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <ul>
-          <li><i class="fas fa-phone-alt"></i> +1 234 567 890</li>
-          <li><i class="fas fa-envelope"></i> One3learn@education.com</li>
-          <li><i class="fas fa-map-marker-alt"></i> Thu Duc City, Ho Chi Minh City, Vietnam</li>
-        </ul>
-      </div>
+      <div class="implementation-section">
+        <h4 onclick="toggleImplementationSection(this)">Feature 4: Quiz - Developer: Tiet Thi Kim Tuyen <span>▶</span></h4>
+        <div class="implementation-row">
+          <iframe src="https://vythanhngo.github.io/One3Learn/les1.html" class="implementation-iframe" frameborder="0"></iframe>
+          <button onclick="location.href='https://vythanhngo.github.io/One3Learn/les1.html'" class="btn-go-to-page">Go to Page</button>
+          </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Learning Platform. All Rights Reserved.</p>
-      <div class="social-media">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <div class="implementation-section">
+          <h4 onclick="toggleImplementationSection(this)">Feature 5: Study Notes - Developer: Tran Thi My Tram <span>▶</span></h4>
+          <div class="implementation-row">
+            <iframe src="https://vythanhngo.github.io/One3Learn/note.html" class="implementation-iframe" frameborder="0"></iframe>
+            <button onclick="window.open('https://vythanhngo.github.io/One3Learn/note.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
+          </div>
       </div>
+      <div class="implementation-section">
+          <h4 onclick="toggleImplementationSection(this)">Feature 6: Track Progress - Developer: Cao Thi Kim Ngan <span>▶</span></h4>
+          <div class="implementation-row">
+            <iframe src="https://vythanhngo.github.io/One3Learn/trackprogress.html" class="implementation-iframe" frameborder="0"></iframe>
+            <button onclick="window.open('https://vythanhngo.github.io/One3Learn/trackprogress.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
+          </div>
+      </div>
+      <div class="implementation-section">
+          <h4 onclick="toggleImplementationSection(this)">Feature 7: Forum - Developer: Phan Thao Tien <span>▶</span></h4>
+          <div class="implementation-row">
+            <iframe src="https://vythanhngo.github.io/One3Learn/forum.html" class="implementation-iframe" frameborder="0"></iframe>
+            <button onclick="window.open('https://vythanhngo.github.io/One3Learn/forum.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
+          </div>
+      </div>
+      <div class="implementation-section">
+          <h4 onclick="toggleImplementationSection(this)">Feature 8: Contact - Developer: Phan Thao Tien <span>▶</span></h4>
+          <div class="implementation-row">
+            <iframe src="https://vythanhngo.github.io/One3Learn/contact.html" class="implementation-iframe" frameborder="0"></iframe>
+              <button onclick="window.open('https://vythanhngo.github.io/One3Learn/contact.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
+          </div>
+      </div>
+      <div class="implementation-section">
+          <h4 onclick="toggleImplementationSection(this)">Feature 9: Login/Register/Forgot Password - Developer: Phan Thao Tien <span>▶</span></h4>
+          <div class="implementation-row">
+            <iframe src="https://vythanhngo.github.io/One3Learn/index.html" class="implementation-iframe" frameborder="0"></iframe>
+            <button onclick="window.open('https://vythanhngo.github.io/One3Learn/index.html#', '_blank')" class="btn-go-to-page">Go to Page</button>
+          </div>
+      </div>
+      <div class="implementation-section">
+        <h4 onclick="toggleImplementationSection(this)">Feature 10: Requirement - Developer: Cao Thi Kim Ngan <span>▶</span></h4>
+        <div class="implementation-row">
+            <iframe src="https://vythanhngo.github.io/One3Learn/feature9.html" class="implementation-iframe" frameborder="0"></iframe>
+            <button onclick="window.open('https://vythanhngo.github.io/One3Learn/feature9.html', '_blank')" class="btn-go-to-page">Go to Page</button>
+        </div>
     </div>
-  </footer>
-  
-  <script src="project.js"></script>
-  <script src="index.js"></script>
-</body>
-</html>
+    
+    <div class="implementation-section">
+        <h4 onclick="toggleImplementationSection(this)">Feature 11: Design - Developer: Tiet Thi Kim Tuyen <span>▶</span></h4>
+        <div class="implementation-row">
+            <iframe src="https://vythanhngo.github.io/One3Learn/feature10.html" class="implementation-iframe" frameborder="0"></iframe>
+            <button onclick="window.open('https://vythanhngo.github.io/One3Learn/feature10.html', '_blank')" class="btn-go-to-page">Go to Page</button>
+        </div>
+    </div>
+    <div>
+    </div>
+  </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <img src="image/logo3.png" alt="Logo" class="footer-logo">
+          <p class="footer-description">Enhancing your learning experience with the best tools and resources.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="course.html">Course</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-phone-alt"></i> +1 234 567 890</li>
+            <li><i class="fas fa-envelope"></i> One3learn@education.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Thu Duc City, Ho Chi Minh City, Vietnam</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Learning Platform. All Rights Reserved.</p>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="project.js"></script>
+    <script src="index.js"></script>
+  </body>
+  </html>
