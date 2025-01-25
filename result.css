@@ -579,8 +579,8 @@
 .team-member-container {
   display: flex;
   margin-bottom: 20px;
-  width: 80%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 85%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #fff;
@@ -678,4 +678,15 @@
 #ratingValue {
   font-weight: bold;
   font-size: 18px;
+}
+.implementation-iframe {
+  width: 650px;
+  height: 350px;
+}
+
+.member-details h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color); /* Bạn có thể thay đổi màu chữ tùy ý */
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
